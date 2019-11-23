@@ -5,7 +5,7 @@ const router     = require('./routes.js');
 const bodyParser = require('body-parser');
 const io         = require('socket.io')(server);
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.use(express.static('static'));
 app.use(bodyParser.json());
