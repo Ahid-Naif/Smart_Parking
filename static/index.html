@@ -32,16 +32,16 @@
         let socket = io({ transports: ['websocket'], upgrade: false });
 
         let checkStatus = (parking_info) => {
-            if (parking_info.parkingFirst == 'available') {
+            if (parking_info.availablity == 'available') {
                 addCar("parking-lot-firstFloor");
             }
-            else if (parking_info.parkingFirst == 'not_available') {
+            else if (parking_info.availablity == 'not_available') {
                 removeCar("parking-lot-firstFloor");
             }
-            if (parking_info.parkingSecond == 'available') {
+            if (parking_info.availablity == 'available') {
                 addCar("parking-lot-secondFloor");
             }
-            else if (parking_info.parkingSecond == 'not_available') {
+            else if (parking_info.availablity == 'not_available') {
                 removeCar("parking-lot-secondFloor");
             }
         }
@@ -58,7 +58,8 @@
             element.classList.add("vacancy");
         }
 
-        socket.on("parking:info", checkStatus);
+        socket.on("parking1:info", checkStatus);
+        socket.on("parking2:info", checkStatus);
     </script>
 </body>
 
