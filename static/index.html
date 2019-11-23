@@ -33,16 +33,16 @@
 
         let checkStatus = (parking_info) => {
             if (parking_info.parkingFirst == 'available') {
-                addCar("parking-lot-firstFloor");
-            }
-            else if (parking_info.parkingFirst == 'not_available') {
                 removeCar("parking-lot-firstFloor");
             }
+            else if (parking_info.parkingFirst == 'not_available') {
+                addCar("parking-lot-firstFloor");
+            }
             if (parking_info.parkingSecond == 'available') {
-                addCar("parking-lot-secondFloor");
+                removeCar("parking-lot-secondFloor");
             }
             else if (parking_info.parkingSecond == 'not_available') {
-                removeCar("parking-lot-secondFloor");
+                addCar("parking-lot-secondFloor");
             }
         }
 
