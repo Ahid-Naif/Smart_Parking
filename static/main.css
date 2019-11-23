@@ -1,0 +1,165 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+html {
+  padding: 0 20px;
+  background-color: #ecf0f1;
+  font-family: "Lato", sans-serif;
+}
+
+.park {
+  background-color: #dcd6d6;
+  padding: 20px;
+  position: relative;
+  border-top: 2px solid #fff;
+  box-shadow: 0px -20px 0px #c4baba;
+  margin-top: 50px;
+}
+
+.car:after, .car:before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: inherit;
+  right: 80px;
+  position: absolute;
+}
+
+.car .car-front:after, .car .car-front:before {
+  content: "";
+  width: 20px;
+  height: 10px;
+  background-color: yellow;
+  position: absolute;
+  top: 70px;
+  border-radius: 50%;
+}
+
+.car .car-middle:before, .car .car-middle:after {
+  content: "";
+  display: block;
+  border-bottom: 10px solid #495d65;
+  border-left: 30px solid transparent;
+  border-right: 40px solid transparent;
+  height: 10px;
+  width: 130px;
+  position: absolute;
+  right: 52px;
+}
+
+.car .car-back:before, .car .car-back:after {
+  content: "";
+  width: 23px;
+  height: 12px;
+  background-color: #D92626;
+  position: absolute;
+  bottom: -62px;
+}
+
+.vacancy {
+  width: 285px;
+  height: 125px;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 31px;
+  text-align: center;
+  line-height: 1.5;
+  color: #333;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.vacancy:before {
+  content: "Empty Parking Lot!";
+}
+.vacancy + .car {
+  margin-left: 40px;
+}
+
+.car {
+  width: 285px;
+  height: 125px;
+  background: #b6bec3;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  border-top-right-radius: 40px 50%;
+  border-bottom-right-radius: 40px 50%;
+  border-bottom-left-radius: 20px 30px;
+  border-top-left-radius: 20px 30px;
+}
+.car:after {
+  top: -12px;
+  border-radius: 3px 100% 0 0;
+}
+.car:before {
+  bottom: -12px;
+  border-radius: 0 0 100% 3px;
+}
+.car .car-front {
+  border-bottom: 40px solid #495d65;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  top: 42px;
+  height: 0;
+  width: 70px;
+  right: 30px;
+  position: absolute;
+  transform: rotate(-90deg);
+  box-shadow: 0px 3px 0 #fff;
+}
+.car .car-front:after {
+  transform: rotate(22deg);
+  left: -5px;
+}
+.car .car-front:before {
+  transform: rotate(-22deg);
+  right: -5px;
+}
+.car.car-blue {
+  background-color: #3498db;
+}
+
+.car + .car,
+.car + .taken {
+  margin-left: 40px;
+}
+.car .car-middle:before {
+  bottom: 8px;
+}
+.car .car-middle:after {
+  top: 8px;
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+.car .car-back {
+  content: "";
+  border-bottom: 35px solid #495d65;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  top: 44px;
+  width: 60px;
+  left: -5px;
+  transform: rotate(90deg);
+  position: absolute;
+}
+.car .car-back:before {
+  left: -30px;
+  border-bottom-left-radius: 40px 22px;
+}
+.car .car-back:after {
+  right: -30px;
+  border-bottom-right-radius: 40px 22px;
+}
+
+.car-line + .car-line {
+  margin-top: 40px;
+}
