@@ -78,6 +78,38 @@ html {
   margin-left: 40px;
 }
 
+.parking-number-first {
+  position: relative;
+  display: inline-block;
+  transform: rotate(90deg);
+  color: #333;
+  font-size: 31px;
+  text-align: center;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+}
+
+.parking-number-first:before {
+  content: "101";
+}
+
+.parking-number-second {
+  position: relative;
+  display: inline-block;
+  transform: rotate(90deg);
+  color: #333;
+  font-size: 31px;
+  text-align: center;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+}
+
+.parking-number-second:before {
+  content: "201";
+}
+
 .car {
   width: 285px;
   height: 125px;
